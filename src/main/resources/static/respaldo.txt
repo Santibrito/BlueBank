@@ -1,0 +1,132 @@
+<div  class="cliente container"> 
+
+    <div class="perfil">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQxQU3OEcsnFcLorpDIZdlVhpjKxWd56DxSw&usqp=CAU">
+            <div class="perfil_des">
+              <h5>Name: {{clientBD.name}} {{clientBD.lastName}}</h5>
+              <h5>E-mail: {{clientBD.email}} </h5>
+          </div>
+      </div>
+
+      <h1>Accounts</h1>
+      <div>
+
+      
+        <div class="col-sm-4" v-for="cards in clientBD.card">
+
+            <div v-if="cards.color == 'TITANIUM'">
+                
+                <div class="card" style="background-color: #656565">
+                    <div class="card__front card__part">
+                      <img class="card__front-square card__square" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Logo_Ripley_banco_2.png">
+                      <img class="card__front-logo card__logo" src="https://assets.stickpng.com/images/58482363cef1014c0b5e49c1.png">
+                      <p class="card_numer">{{cards.number}}</p>
+                      <div class="card__space-75">
+                        <span class="card__label">Card holder</span>
+                        <p class="card__info">{{cards.cardHolder}}</p>
+                      </div>
+                      <div class="card__space-25">
+                        <span class="card__label">Expires</span>
+                              <p class="card__info">{{cards.thruDate.substr(2,5)
+                            }}</p>
+                      </div>
+                    </div>
+                    
+                    <div class="card__back card__part">
+                      <div class="card__black-line"></div>
+                      <div class="card__back-content">
+                        <div class="card__secret">
+                          <p class="card__secret--last">{{cards.cvv}}</p>
+                        </div>
+                        <img class="card__back-square card__square" src="https://assets.stickpng.com/images/58482363cef1014c0b5e49c1.png">
+                        <img class="card__back-logo card__logo" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Logo_Ripley_banco_2.png">
+                        
+                      </div>
+                    </div>
+                    
+                  </div>
+
+            </div>
+
+            <div v-if="cards.color == 'GOLD'">
+                <div class="card" style="background-color:  #ffbf00 ;">
+                    <div class="card__front card__part">
+                        <img class="card__front-square card__square" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Logo_Ripley_banco_2.png">
+                        <img class="card__front-logo card__logo" src="https://assets.stickpng.com/images/58482363cef1014c0b5e49c1.png">
+                        <p class="card_numer">{{cards.number}}</p>
+                        <div class="card__space-75">
+                          <span class="card__label">Card holder</span>
+                          <p class="card__info">{{cards.cardHolder}}</p>
+                        </div>
+                        <div class="card__space-25">
+                          <span class="card__label">Expires</span>
+                                <p class="card__info">{{cards.thruDate.substr(2,5)
+                              }}</p>
+                        </div>
+                      </div>
+                      
+                      <div class="card__back card__part">
+                        <div class="card__black-line"></div>
+                        <div class="card__back-content">
+                          <div class="card__secret">
+                            <p class="card__secret--last">{{cards.cvv}}</p>
+                          </div>
+                          <img class="card__back-square card__square" src="https://assets.stickpng.com/images/58482363cef1014c0b5e49c1.png">
+                          <img class="card__back-logo card__logo" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Logo_Ripley_banco_2.png">
+                          
+                        </div>
+                      </div>
+                    
+                  </div>
+            </div>
+
+            <div v-if="cards.color == 'SILVER'">
+                <div class="card" style="background-color: #C0C3C1">
+                    <div class="card__front card__part">
+                        <img class="card__front-square card__square" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Logo_Ripley_banco_2.png">
+                        <img class="card__front-logo card__logo" src="https://assets.stickpng.com/images/58482363cef1014c0b5e49c1.png">
+                        <p class="card_numer">{{cards.number}}</p>
+                        <div class="card__space-75">
+                          <span class="card__label">Card holder</span>
+                          <p class="card__info">{{cards.cardHolder}}</p>
+                        </div>
+                        <div class="card__space-25">
+                          <span class="card__label">Expires</span>
+                                <p class="card__info">{{cards.thruDate.substr(2,5)
+                              }}</p>
+                        </div>
+                      </div>
+                      
+                      <div class="card__back card__part">
+                        <div class="card__black-line"></div>
+                        <div class="card__back-content">
+                          <div class="card__secret">
+                            <p class="card__secret--last">{{cards.cvv}}</p>
+                          </div>
+                          <img class="card__back-square card__square" src="https://assets.stickpng.com/images/58482363cef1014c0b5e49c1.png">
+                          <img class="card__back-logo card__logo" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Logo_Ripley_banco_2.png">
+                          
+                        </div>
+                      </div>
+                    
+                  </div>
+            </div>
+            
+
+   
+        </div>
+        
+        <a href="create-cards.html" style="padding: 2vh; background-color: black;color: white;">Crear tarjeta</a>
+     
+      </div>
+      </div>
+
+
+
+
+
+       background: linear-gradient(155deg, rgba(8, 26, 228, 0.481), transparent);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  -webkit-animation: cardWobble 10000ms infinite;
+          animation: cardWobble 10000ms infinite;

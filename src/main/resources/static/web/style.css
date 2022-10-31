@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.perfil{
+    display: flex;
+    padding: 10vh;
+}
+
+.perfil img{
+   border-radius: 50vh;
+
+}
+.perfil_des{
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 10vh;
+}
+
+button{
+    background-color: #000000;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: white;
+}
+
+
+.btn{
+    background-color: black;
+    padding: 5px;
+    color: white;
+    text-align: center;
+
+}
+

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<!--Style-->
+	<link rel="stylesheet" href="../style.css">
+	<!-- UIkit CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.2/dist/css/uikit.min.css" />
+
+	<!--Boostrap Style-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+	<!--Talwindcss-->
+	<script src="https://cdn.tailwindcss.com"></script>
+
+	 <!--Iconos-->
+	 <script src="https://kit.fontawesome.com/db55518b9d.js" crossorigin="anonymous"></script>
+
+	 <!--Animations-->
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	 
+	 <!--Ajax-->
+	 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'><link rel="stylesheet" href="./style.css">
+
+  </head>
+<body class="accounts animate__animated animate__fadeIn animate__delay-0.2s">
+   
+  <header>
+    <div class="toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <h3>Dashboard</h3>
+    <a href="#">
+        <i class="fas fa-sign-out-alt"></i>
+    </a>
+</header>
+<nav>
+    <ul>
+        <li>
+            <a class="toggle">
+                <span class="icon"><i class="fas fa-bars"></i></span>
+                <span class="title">Menu</span>
+            </a>
+        </li>
+        <li>
+            <a href="accounts.html" >
+                <span class="icon "><i class="fas fa-home"></i></span>
+                <span class="title ">Inicio</span>
+            </a>
+        </li>
+
+        <li>
+          <a href="cards.html">
+            <span class="icon"><i class="fa-brands fa-cc-visa"></i></span>
+            <span class="title">Tarjetas</span>
+        </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon"><i class="fas fa-info"></i></span>
+                <span class="title">Help</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon"><i class="fas fa-cog"></i></span>
+                <span class="title">Setting</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon"><i class="fas fa-lock"></i></span>
+                <span class="title">Password</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                <span class="title">Sign Out</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+  
+  <div id="app"> 
+
+    <section class="container-accounts-main ">
+      <div class="trans-header">
+
+        <div class="trans-header-box1">
+          <h2>Cuenta: {{dataApi.number}}</h2>
+          <h3 style="margin-top: 8px;">Fecha de creacion: {{dataApi.creationDate.substr(0,10)}}</h3>
+        </div>
+
+        <div class="trans-header-box2">
+          <h5>Balance</h5>
+          <h1>${{dataApi.balance}}</h1>
+        </div>
+
+
+      </div>
+
+      <div class="title-acc" style="margin-top: 5vh;">
+        <h3>Historial de transacciones</h3>
+    </div>
+
+
+
+    <section class="container-main-loan-grid">
+   
+<div class="container table-responsive py-3"> 
+<table class="table">
+<thead class="thead-dark">
+<tr>
+  <th scope="col">Fecha</th>
+  <th scope="col">Descripcion</th>
+  <th scope="col">Tipo de prestamo</th>
+  <th scope="col">Monto</th>
+</tr>
+</thead>
+<tbody>
+<tr v-for="details in clientAccounts" >
+  <td>{{details.date.substr(0,10)}}</td>
+  <td>{{details.description}}</td>
+  <td :style="{color: (details.type== 'DEBITO'? '#009b46':'#ee2c2c')}">{{details.type}}</td>
+  <td class="currency" >{{details.amount}}</td>
+  
+ 
+</tr>
+
+<tr>
+  <th colspan="4" id="ver-mas-1" v-show="clientAccounts.length > 10">
+
+    <a href="" id="ver-mas-2">Ver mas movimientos</a>
+
+  </th>
+</tr>
+</tbody>
+</table>
+</div>
+
+    </section>
+    <div class="container-btn-acc" style="margin-top: 5vh;">
+    <button><a href="accounts.html" style="text-decoration: none;">Volver al menu principal</a></button>
+  </div>
+    </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="./../script.js"></script>
+  <script src="js/account.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</body>
+</html>

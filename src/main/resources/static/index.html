@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Banking</title>
+
+    <!--Style-->
+    <link rel="stylesheet" href="style.css">
+
+	<!-- UIkit CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.2/dist/css/uikit.min.css" />
+
+    <!--Boostrap Style-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!--Talwindcss-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+	 <!--Iconos-->
+	 <script src="https://kit.fontawesome.com/db55518b9d.js" crossorigin="anonymous"></script>
+
+	 <!--Animations-->
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	 
+	 <!--Ajax-->
+	 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'><link rel="stylesheet" href="./style.css">
+	
+</head>
+<body >
+
+
+
+<header class="animate__animated animate__fadeIn">
+
+    <!--NAVBAR-->
+	<section class="nav-bar-container fixed-top" id="z">
+
+    	<!--Navbar Desktop-->
+    	<nav class="relative px-2 py-4 flex justify-between items-center bg-white" id="navBar" >
+		<a class="text-3xl font-bold leading-none logo" href="#">
+			<img src="assets/img/cdnlogo.com_deutsche-bank.svg" width="40">
+			<h1>BluBank</h1>
+		</a>
+		<div class="lg:hidden" >
+			<button class="navbar-burger flex items-center text-blue-600 p-3" >
+				<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<title>Mobile menu</title>
+					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+				</svg>
+			</button>
+		</div>
+		<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+            <li><a class="text-sm text-blue-600 font-bold" href="#">Inicio</a></li>
+			<li class="text-gray-300">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>
+			</li>
+			<li><a class="text-sm text-blue-600 font-bold" href="#banking">Home Banking</a></li>
+			<li class="text-gray-300">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>
+			</li>
+			<li><a class="text-sm text-blue-600 font-bold" href="#tarjetas">Nuestras Tarjetas</a></li>
+			<li class="text-gray-300">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>
+			</li>
+			<li><a class="text-sm text-blue-600 font-bold" href="#contacto">Atencion al Cliente</a></li>
+			</li>
+		</ul>
+		<a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200" href="register.html">Hacete Cliente</a>
+		<a class="hidden lg:inline-block py-2 px-6 bg-blue-600 hover:bg-blue-700 text-sm text-white font-bold rounded-xl transition duration-200" href="login.html">Online Banking</a>
+		</nav>
+
+    	<!--Navbar Movile-->
+    	<div class="navbar-menu relative z-50 hidden">
+		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+			<div class="flex items-center mb-2">
+				<a class="mr-auto text-3xl font-bold leading-none" href="#">
+					<img src="assets/img/cdnlogo.com_deutsche-bank.svg" width="50">
+				</a>
+				<button class="navbar-close">
+					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+			<div>
+				<ul>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Inicio</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#banking">Home Banking</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#tarjetas">Nuestras Tarjetas</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#contacto">Atencion al Cliente</a>
+					</li>
+					
+				</ul>
+			</div>
+			<div class="mt-auto">
+				<div class="pt-6">
+					<a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl" href="register.html">Hacete Cliente</a>
+					<a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl" href="login.html">Online Banking</a>
+				</div>
+				<p class="my-4 text-xs text-center text-gray-400">
+					<span>Copyright © 2022</span>
+				</p>
+			</div>
+		</nav>
+		</div>
+
+	</section>
+
+    <!--BANNER-->
+	<section class="banner-section-container" id="z">
+		<!--Banner part 1-->
+    	<div class="banner-container">
+
+        <div class="banner_container_text ">
+        
+            <div class="banner-hr-text">
+                <hr> <p>  Plataforma de pago en línea confiable</p>
+            </div>
+
+            <h1>Tu <span id="bank-bold">Banco Digital</span>, siempre con vos estés dónde estés</h1>
+
+            <p>Disfrutá de la mejor experiencia bancaria pero sin los costos de los bancos tradicionales.</p>
+
+            <div class="banner-btn">
+
+                <a href="#" id="new-client">Hacerce Cliente</a>
+
+                <a href="#" id="btn-video"><i class="fa-solid fa-circle-play"></i></a>
+
+            </div>
+
+        </div>
+
+    	</div>
+
+		<!--Banner part 2-->
+		<div class="banner-container-bank">
+
+		<div class="container-status container">
+
+
+			<div class="status-box">
+				<h2>3,000 +</h2>
+				<p>Clientes en más de 120 países</p>
+			</div>
+
+
+			<div class="status-box">
+				<h2>115B +</h2>
+				<p>Transacciones de compra</p>
+			</div>
+
+			
+			<div class="status-box">
+				<h2>600 +</h2>
+				<p>Soluciones Patentadas</p>
+			</div>
+
+			
+			<div class="status-box">
+				<h2>80M +</h2>
+				<p>Ubicaciones de comercianLes</p>
+			</div>
+
+
+		</div>
+		
+
+		</div>
+
+		<!--Banner part 2 Movile-->
+		<div id="carouselExampleDark" class="carousel carousel-dark slide banner-movile" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+		  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+		  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+		  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+		  <button type="button" data-bs-target="#carouselExampleDarks" data-bs-slide-to="4" aria-label="Slide 5"></button>
+			</div>
+			<div class="carousel-inner">
+		  <div class="carousel-item active" data-bs-interval="10000">
+			<div class="status-box container-status container">
+				<h2>3,000 +</h2>
+				<p>Clientes en más de 120 países</p>
+			</div>
+
+		  </div>
+
+		  <div class="carousel-item" data-bs-interval="2000">
+			<div class="status-box container-status container">
+				<h2>115B +</h2>
+				<p>Transacciones de compra</p>
+			</div>
+		  </div>
+
+		  <div class="carousel-item" data-bs-interval="2000">
+			<div class="status-box container-status container">
+				<h2>115B +</h2>
+				<p>Transacciones de compra</p>
+			</div>
+		  </div>
+		  <div class="carousel-item">
+			<div class="status-box container-status container" data-bs-interval="2000">
+				<h2>600 +</h2>
+				<p>Soluciones Patentadas</p>
+			</div>
+		</div>
+
+		<div class="carousel-item">
+			<div class="status-box container-status container" data-bs-interval="2000">
+				<h2>80M +</h2>
+				<p>Ubicaciones de comercianLes</p>
+			</div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Next</span>
+		</button>
+		</div>
+	</section>
+
+</header>
+
+<main>
+	
+
+	<!--3D CONTAINER-->
+	
+	<section class="3d-container">
+		<div class="title-card3d">
+
+		<h2 >Una tarjeta para todo </h2>
+		<p>
+			Usá tu tarjeta BANK donde quieras. En Argentina o en el exterior, para compras en internet o para pagar tus servicios de música y entretenimiento.
+		</p>
+
+	</div>
+
+	<div class="card3d_img_movil">
+		<div class="cover atvImg">
+		   <div class="atvImg-layer" data-img="https://i.ibb.co/PtW9QXv/card-1.png"></div>
+		   <div class="atvImg-layer" data-img="https://i.ibb.co/PtW9QXv/card-1.png"></div>
+		</div>
+	</div>
+	
+	<section class="container-card3d container">
+
+		<div class="card3d_box1">
+
+			<h3>Protección  de compras</h3>
+			<p>
+				La Protección de compras proporciona reembolsos por el robo y/o daño accidental de un artículo comprado cubierto. La Compra Cubierta debe ser en su totalidad con la tarjeta Mastercard.
+			</p>
+
+		</div>
+
+		<div class="card3d_box2">
+
+			<h3>Garantía Extendida</h3>	
+			<p>
+				Garantía extendida extiende el período de garantía original del fabricante o el de la marca de la tienda garantizando hasta 1 año completo para los artículos que compre que estén cubiertos.
+			</p>
+
+		</div>
+
+		<div class="card3d_box3">
+
+			<h3>Protección  de Precios</h3>
+
+			<p>
+				Protección de Precios ofrece el reembolso de la diferencia entre el precio que se pagó por un artículo y un precio en un “anuncio impreso” más bajo del mismo artículo hasta 30 días después de la compra.
+			</p>
+
+		</div>
+
+		<div class="card3d_box4">
+
+			<h3>Mastercard Global </h3>	
+
+			<p>
+				Mastercard Global Service proporciona asistencia durante emergencias relacionada con la tarjeta en cualquier momento, desde cualquier lugar, por medio de una llamada telefónica gratuita.
+			</p>
+
+		</div>
+
+		<div class="card3d_box5"  >
+			<div class="cover atvImg">
+   			<div class="atvImg-layer" data-img="https://i.ibb.co/PtW9QXv/card-1.png">
+				
+			</div>
+   			<div class="atvImg-layer" data-img="https://i.ibb.co/PtW9QXv/card-1.png"></div>
+			</div>
+		</div>
+	
+	</section>
+
+
+<div id="banking"></div>
+	<!--Responsive Card Info-->
+	<div class="collapse-container" >
+	<ul uk-accordion class="container">
+		<li class="uk-open">
+			<a class="uk-accordion-title " href="#" >Protección de compras</a>
+			<div class="uk-accordion-content">
+				<p>La Protección de compras proporciona reembolsos por el robo y/o daño accidental de un artículo comprado cubierto. La Compra Cubierta debe ser en su totalidad con la tarjeta Mastercard. </p>
+			</div>
+		</li>
+		<li>
+			<a class="uk-accordion-title" href="#">Garantía Extendida</a>
+			<div class="uk-accordion-content">
+				<p>Garantía extendida extiende el período de garantía original del fabricante o el de la marca de la tienda garantizando hasta 1 año completo para los artículos que compre que estén cubiertos. </p>
+			</div>
+		</li>
+		<li>
+			<a class="uk-accordion-title" href="#">Protección de Precios</a>
+			<div class="uk-accordion-content">
+				<p>Protección de Precios ofrece el reembolso de la diferencia entre el precio que se pagó por un artículo y un precio en un “anuncio impreso” más bajo del mismo artículo hasta 30 días después de la compra. </p>
+			</div>
+		</li>
+
+		<li>
+			<a class="uk-accordion-title" href="#">Mastercard Global </a>
+			<div class="uk-accordion-content">
+				<p>Mastercard Global Service proporciona asistencia durante emergencias relacionada con la tarjeta en cualquier momento, desde cualquier lugar, por medio de una llamada telefónica gratuita. </p>
+			</div>
+		</li>
+	</ul>
+	</div>
+	</section >
+	
+	<!--HOMEBANKING CONTAINER-->
+	
+	<section class="home-banking" >
+	<div class="title-homebanking">
+
+	<h2 >Usar tu banco nunca fue tan facil</h2>
+		<p>Realizá tus operaciones habituales sin venir al Banco ni acercarte a un cajero. Operá online las 24 horas.</p>
+	</div>
+
+	<div class="container-homebanking-use container">
+
+		<div class="homebanking-text">
+			
+			<div class="text-info-homebanking">
+				<h3> <span><i style="color: #3b82f6; margin-right: 1vh;" class="fa-solid fa-check"></i></span> Ver últimos movimientos de Cuenta</h3>
+			</div>
+
+			<div class="text-info-homebanking">
+				<h3> <span><i style="color: #3b82f6; margin-right: 1vh;" class="fa-solid fa-check"></i></span> Ver el resumen de tu Tarjeta de crédito</h3>
+			</div>
+
+			<div class="text-info-homebanking">
+				<h3> <span><i style="color: #3b82f6;margin-right: 1vh;" class="fa-solid fa-check"></i></span>  Ver el resumen de tu Cuenta</h3>
+			</div>
+
+			<div class="text-info-homebanking">
+				<h3> <span><i style="color: #3b82f6;margin-right: 1vh;" class="fa-solid fa-check"></i></span>  Hacer Transferencias</h3>
+			</div>
+
+			<div class="text-info-homebanking">
+				<h3> <span><i style="color: #3b82f6; margin-right: 1vh;" class="fa-solid fa-check"></i></span>  Ver últimos movimientos de Cuenta</h3>
+			</div>
+
+
+			<div class="text-info-homebanking-video">
+				<h3>  No sabes como abrir tu Home Banking? mira este <span style="color: #3b82f6;"><a  style="text-decoration: none;" target="_blank" href="https://youtu.be/AKmHrbUCyf4">video explicativo</a> </span></h3>
+			</div>
+
+		</div>
+
+		<div class="homebanking-img">
+			<img src="assets/img/dash2.png">
+		</div>
+
+
+	</div>
+
+	</section>
+
+	<!--Publicidad-->
+	<section class="new-acc-container container">
+
+		<div class="container-advertising">
+
+			<div class="advertising-box-text">
+				
+				<h2> <p>Sumate a más de</p> 4 Millones de personas </h2>
+				<span>que usan Bank</span>
+				<a href="#">Quiero mi cuenta</a>
+			</div>
+
+		</div>
+
+	</section>
+
+	<div id="tarjetas"></div>
+
+	<!--COMPARACION CARD-->
+	<section class="comparison-cards">
+
+		<div class="title-comparison">
+
+			<h2>Tu tarjeta BANK gratis</h2>
+				<p>Conocé cuál de nuestras tarjetas se adapta mejor a vos. Pedila ahora 100% online y disfrutala bonificada por 6 meses.</p>
+		</div>
+
+
+		<div id="carouselExampleDarks" class="carousel carousel-dark slide" data-bs-ride="carousel">
+			
+			<div class="carousel-inner">
+
+			  <div class="carousel-item active" data-bs-interval="4000">
+				<div class="status-boxs  container">
+
+					<div class="comparation-card">
+						<div class="container-card-cardimg">
+							<img src="assets/img/titanium.png">
+						</div>
+
+						<div class="container-card-text">
+						<h2 style="color:#C0C0C0;">TITANIUM CARD</h2>
+						<br>
+						<h3><span><i style="color: #3b82f6; margin-right: 1vh;" class="fa-solid fa-check"></i></span>Súper Préstamo Personal Pre-acordado listo para usar </h3>
+						
+						<h3><span><i style="color: #3b82f6; margin-right: 1vh;" class="fa-solid fa-check"></i></span>Cuenta Títulos para invertir de manera simple en Superfondos, Bonos, Acciones y Cedears. </h3>
+						
+						<h3><span><i style="color: #3b82f6; margin-right: 1vh;" class="fa-solid fa-check"></i></span>Servicio de cuenta con descubierto autorizado </h3>
+
+						<h3><span><i style="color: #3b82f6; margin-right: 1vh;" class="fa-solid fa-check"></i></span>Atención personalizada </h3>
+					
+						<h3><span><i style="color: #3b82f6; margin-right: 1vh;" class="fa-solid fa-check"></i></span>Beneficios exclusivos </h3>
+						
+						<h3><span><i style="color: #3b82f6; margin-right: 1vh;" class="fa-solid fa-check"></i></span>Asistencia en viajes y servicios preferenciales 
+					</h3>
+					
+						<div class="button-card">
+						
+						<a href="#">Solicitar Tarjeta</a>
+
+					</div>
+					</div>
+						
+					</div>
+				</div>
+			  </div>
+
+
+			  <div class="carousel-item" data-bs-interval="4000">
+				<div class="status-boxs  container">
+
+					<div class="comparation-card">
+						<div class="container-card-cardimg">
+							<img src="assets/img/gold.png">
+						</div>
+
+						<div class="container-card-text">
+						<h2 style="color: #FFD700;">GOLD CARD</h2>
+						<br>
+						
+						<h3><span><i style="color: #3b82f6; margin-right: 1vh;" class="fa-solid fa-check"></i></span>Súper Préstamo Personal Pre-acordado listo para usar </h3>
+						
+						<h3><span><i style="color: #3b82f6; margin-right: 1vh;" class="fa-solid fa-check"></i></span>Cuenta Títulos para invertir de manera simple en Superfondos, Bonos, Acciones y Cedears. </h3>
+						
+						<h3><span><i style="color: #3b82f6; margin-right: 1vh;" class="fa-solid fa-check"></i></span>Servicio de cuenta con descubierto autorizado </h3>
+
+						<h3><span><i style="color: #3b82f6; margin-right: 1vh;" class="fa-solid fa-check"></i></span>Atención personalizada </h3>
+					
+						<h3><span><i style="color: #3b82f6; margin-right: 1vh;" class="fa-solid fa-check"></i></span>Beneficios exclusivos </h3>
+						
+						<h3><span><i style="color: #3b82f6; margin-right: 1vh;" class="fa-solid fa-check"></i></span>Asistencia en viajes y servicios preferenciales 
+					</h3>	
+						
+						
+						<div class="button-card">
+						
+						<a href="#">Solicitar Tarjeta</a>
+
+					</div>
+					</div>
+						
+					</div>
+				</div>
+			  </div>
+	
+	
+			  <div class="carousel-item" data-bs-interval="4000">
+				<div class="status-boxs  container">
+
+					<div class="comparation-card">
+						<div class="container-card-cardimg">
+							<img src="assets/img/silver.png">
+						</div>
+
+						<div class="container-card-text">
+						<h2 style="color: #807d7f ;">SILVER CARD</h2>
+						<br>
+						<h3><span><i style="color: #3b82f6; margin-right: 1vh;" class="fa-solid fa-check"></i></span>Súper Préstamo Personal Pre-acordado listo para usar </h3>
+						
+						<h3><span><i style="color: #3b82f6; margin-right: 1vh;" class="fa-solid fa-check"></i></span>Cuenta Títulos para invertir de manera simple en Superfondos, Bonos, Acciones y Cedears. </h3>
+						
+						<h3><span><i style="color: #3b82f6; margin-right: 1vh;" class="fa-solid fa-check"></i></span>Servicio de cuenta con descubierto autorizado </h3>
+
+						<h3 style="color: #626262;text-decoration:line-through;"><span><i style="color: #626262; margin-right: 1vh;" class="fa-solid fa-x"></i></span>Atención personalizada </h3>
+					
+						<h3 style="color: #626262;text-decoration:line-through;"><span><i style="color: #626262; margin-right: 1vh;" class="fa-solid fa-x"></i></span>Beneficios exclusivos </h3>
+						
+						<h3 style="color: #626262;text-decoration:line-through;"><span><i style="color: #626262; margin-right: 1vh;" class="fa-solid fa-x"></i></span>Asistencia en viajes y servicios preferenciales 
+						</h3>
+						
+						
+						<div class="button-card">
+						
+						<a href="#">Solicitar Tarjeta</a>
+
+					</div>
+					</div>
+						
+					</div>
+				</div>
+			  </div>
+
+		</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDarks" data-bs-slide="prev">
+			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDarks" data-bs-slide="next">
+			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Next</span>
+			</button>
+		</div>
+			
+			  
+		
+	</section>
+<div id="contacto"></div>
+
+	<section class="attention">
+		<div class="container-attention container">
+			
+			<div class="attention-text">
+				<h2>Atención 100% online</h2>
+				<p>Si tenés dudas, ¡preguntanos a nosotr@s! Si sos usuari@ de BANK escribinos por el chat de la app.</p>
+				<br>
+				<p>Si todavía no sos parte de BANK, nos podés escribir por mail a BANK@BANK.com.ar o por nuestras redes sociales.</p>
+				<br>
+				<p>Además en la Comunidad BANK, encontrarás las respuestas con un click.</p>
+			</div>
+
+			<div class="attention-img">
+				<img src="assets/img/contactos.gif">
+			</div>
+
+
+
+		</div>
+	</section>
+
+</main>
+	<!--FOOTER-->
+	<footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Encuéntranos</h4>
+                                <span>Rosario, Santa Fe</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Llámanos</h4>
+                                <span>9876543210 0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Envíanos un correo</h4>
+                                <span>mail@info.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html">
+									<img src="assets/img/cdnlogo.com_deutsche-bank.svg" class="img-fluid" alt="logo" width="80"></a>
+                            </div>
+                            <div class="footer-text">
+                                <p>BluBank Argentina S.A. es una sociedad anónima según la ley argentina. Ningún accionista mayoritario de capital extranjero responde por las operaciones del banco.</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Nuestras Redes</span>
+                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Enlaces útiles</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Inicio</a></li>
+                                <li><a href="#">Home Banking</a></li>
+                                <li><a href="#">Tarjetas</a></li>
+                                <li><a href="#">Atencion al Cliente</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribete</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Si sos titular de una BluBank de Crédito o de una BluBank de Débito, podés suscribirte a Sorpresa de forma inmediata</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Dirección de correo electrónico">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2022, All Right Reserved <a href="#">BluBank</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Inicio</a></li>
+                                <li><a href="#">Términos</a></li>
+                                <li><a href="#">Privacidad</a></li>
+                                <li><a href="#">Política</a></li>
+                                <li><a href="#">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+   	<!--Script Boostrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">  
+    </script>
+
+	<!-- UIkit JS -->
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.2/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.2/dist/js/uikit-icons.min.js"></script>
+
+    <!--Script HTML -->
+    <script src="script.js"></script>
+
+</body>
+</html>
